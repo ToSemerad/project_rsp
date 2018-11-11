@@ -23,4 +23,8 @@ All used resources are saved in `./resources` folder
 
 The source code is saved in `./src` folder
 
+### Development
+
+- docker-compose -f develop.yml up
+
 ### Live demo
