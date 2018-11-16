@@ -23,8 +23,16 @@ All used resources are saved in `./resources` folder
 
 The source code is saved in `./src` folder
 
-### Development
+The app is written in PHP (Symfony framework) using relational database (live demo is using postgresql, but since there is Doctrine ORM, it's not a problem to use MySQL or derivate of MySQL) 
 
-- docker-compose -f develop.yml up
+### Development 
+
+- check the [development](docs/development.md) documentation
+- check the [deployment](docs/deployment.md) documentation
 
 ### Live demo
+
+- app: http://35.195.128.53
+- accounts:
+    - `admin`:`adminpass`
+
