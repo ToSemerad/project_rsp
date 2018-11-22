@@ -10,7 +10,7 @@
 ## Documents
 
 - [Assignment](docs/xRSP_zadani.pdf)
-- [Business model/Lean Canvas]() - todo
+- [Business model/Lean Canvas](docs/LeanCanvas-LogosPolytechnikos.PNG)
 - [Presentation]() - todo
 - [User documentation]() - todo
 - [Technical documentation]() - todo
