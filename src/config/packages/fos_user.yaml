@@ -1,6 +1,6 @@
 fos_user:
   db_driver: orm
-  firewall_name: main
+  firewall_name: backend
   user_class: AppBundle\Entity\User
   from_email:
     address: "logos.polytechnikos@vspj.cz"
