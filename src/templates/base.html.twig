@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+        <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
