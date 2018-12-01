@@ -8,7 +8,7 @@ use FOS\UserBundle\Model\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table("public.user")
+ * @ORM\Table("author")
  */
 class User extends \FOS\UserBundle\Model\User implements UserInterface
 {
