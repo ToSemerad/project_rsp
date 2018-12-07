@@ -47,7 +47,7 @@ class Article
     private $team;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\File", mappedBy="article", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\File", mappedBy="article", orphanRemoval=true, cascade={"persist"})
      */
     private $files;
 
@@ -146,5 +146,20 @@ class Article
         }
 
         return $this;
+    }
+
+    public function getCreated():? \DateTime
+    {
+        return $this->created;
+    }
+
+    public function getUpdated():? \DateTime
+    {
+        return $this->updated;
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
     }
 }
