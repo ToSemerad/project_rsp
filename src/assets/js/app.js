@@ -6,9 +6,17 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.css');
+require('../sass/app.scss');
+require('underscore');
+require('backbone');
+var $ = require('jquery');
+require('tether');
+require('bootstrap');
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
-// var $ = require('jquery');
+// or you can include specific pieces
+// require('bootstrap-sass/javascripts/bootstrap/tooltip');
+// require('bootstrap-sass/javascripts/bootstrap/popover');
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+});

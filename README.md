@@ -11,7 +11,7 @@
 
 - [Assignment](docs/xRSP_zadani.pdf)
 - [Business model/Lean Canvas](docs/LeanCanvas-LogosPolytechnikos.PNG)
-- [Presentation]() - todo
+- [Presentation](docs/LogosPolytechnikos_cv2.pptx)
 - [User documentation]() - todo
 - [Technical documentation]() - todo
 
