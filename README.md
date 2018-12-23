@@ -34,5 +34,6 @@ The app is written in PHP (Symfony framework) using relational database (live de
 
 - app: http://35.195.128.53
 - accounts:
-    - `admin`:`adminpass`
+    - `recenzent@vspj.cz`:`recenzent`
+    - for author, you have to create account via website (register)
 
