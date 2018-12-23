@@ -5,7 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
         <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -28,7 +28,7 @@
                 <div class="col-lg-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link {% if route == "dashboard" %}active{% endif %}" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true" href="{{ path('dashboard') }}">Home</a>
-                        <a class="nav-link {% if route starts with "article" %}active{% endif %}" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false" href="{{ path('article_index') }}">Odevzdané články</a>
+                        {% if is_granted("ROLE_AUTHOR") %}<a class="nav-link {% if route starts with "article" %}active{% endif %}" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false" href="{{ path('article_index') }}">Odevzdané články</a>{% endif %}
                     </div>
                 </div>
                 <div class="col-lg-9">

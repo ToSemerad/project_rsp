@@ -51,9 +51,15 @@ class Article
      */
     private $files;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Review", mappedBy="article")
+     */
+    private $reviews;
+
     public function __construct()
     {
         $this->files = new ArrayCollection();
+        $this->reviews = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -161,5 +167,10 @@ class Article
     public function __toString()
     {
         return $this->getTitle();
+    }
+
+    public function getLatestFile()
+    {
+
     }
 }
