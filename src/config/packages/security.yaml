@@ -33,6 +33,6 @@ security:
         - { path: ^/logout, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/dashboard, role: ROLE_AUTHOR }
+        - { path: ^/dashboard, roles: [ROLE_AUTHOR, ROLE_RECENZENT]}
         - { path: ^/admin, roles: ROLE_SUPERADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

@@ -25,12 +25,34 @@ class User extends \FOS\UserBundle\Model\User implements UserInterface
     private $articles;
 
     /**
+     * @return mixed
+     */
+    public function getReviews()
+    {
+        return $this->reviews;
+    }
+
+    /**
+     * @param mixed $reviews
+     */
+    public function setReviews($reviews): void
+    {
+        $this->reviews = $reviews;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Review", mappedBy="user")
+     */
+    private $reviews;
+
+    /**
      * User constructor.
      */
     public function __construct()
     {
         parent::__construct();
         $this->articles = new ArrayCollection();
+        $this->reviews = new ArrayCollection();
     }
 
     public function getId(): ?int

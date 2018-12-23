@@ -1,0 +1,50 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Review!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        {% if is_granted("ROLE_RECENZENT") %}
+            <h1>recenze pro: {{ review.article.title }}</h1>
+
+            <table class="table">
+                <tr>
+                    <td>Autor</td>
+                    <td>{{ review.article.author }}</td>
+                </tr>
+                <tr>
+                    <td>Vytvořeno</td>
+                    <td>{{ review.article.created|date }}</td>
+                </tr>
+                <tr>
+                    <td>Článek</td>
+                    <td>
+                        <ul>
+                            {% for file in review.article.files %}
+                                <li><a href="/uploads/articles/{{ file.file }}">{{ file.created|date('j. n. Y') }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tým</td>
+                    <td>{{ review.article.team }}</td>
+                </tr>
+                <tr><td>stav</td><td>{{ review.status }}</td></tr>
+            </table>
+
+            {% if review.status == "created" %}
+                <a href="{{ path('review_accept', {'id': review.id}) }}" class="btn-success btn btn-x" title="přijmout"><i class="fa fa-check"></i> Přijmout </a>
+                <a href="{{ path('review_reject', {'id': review.id}) }}" class="btn-danger btn btn-x" title="odmítnout"><i class="fa fa-times"></i> Odmítnout</a>
+            {% endif %}
+
+
+
+        {% endif %}
+    </div>
+{% endblock %}

@@ -6,7 +6,7 @@ use Exception;
 
 require 'vendor/deployer/deployer/recipe/symfony4.php';
 
-set('shared_dirs', ['src/var/log', 'src/var/sessions']);
+set('shared_dirs', ['src/var/log', 'src/var/sessions', 'node_modules', 'public']);
 set('shared_files', ['src/.env']);
 set('writable_dirs', ['src/var']);
 set('bin/composer', 'composer');
